@@ -1,0 +1,71 @@
+.form{
+    padding: 5px 15px 15px 15px;
+
+    @include small{
+        padding: 5px;
+    }
+
+    &__group{
+        margin: 10px 0 15px 0;
+    }
+
+    // &__label{
+    //     font-weight: bold;
+    // }
+
+    &__input{
+
+        @include input;
+    }
+
+    &__textarea {
+        
+        @include input;
+        min-height: 70px;
+    }
+
+    &__footer{
+        @include flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: -10px;
+    } 
+
+    &__switch{
+        background: $light;
+        width: 40px;
+        height: 14px;
+        margin-left: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .8s all;
+        @include flex;
+
+        .toggle{
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: lighten($dark-lighter, 25);
+            transition: .5s all;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        &--checkbox{
+            display: none;
+        }
+    }
+
+    &__switch--checkbox:checked + &__switch{
+        background: rgba($primary, 0.3);
+        justify-content: flex-end;
+
+        .toggle{
+            background: $primary;
+        }
+    }
+
+
+    .post-toggle{
+        @include flex;
+    }
+}

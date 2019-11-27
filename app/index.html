@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hacker News</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="./images/YC.png" alt="YC logo">
+        </div>
+        <nav class="nav">
+            <div class="nav__user hide-sm">
+                <img src="./images/hn-hacker.png" alt="">
+                <span>Timigod</span>
+            </div>
+            
+            <input type="checkbox" name="nav_checkbox" class="nav__checkbox hidden" id="nav__checkbox">
+
+            <label for="nav__checkbox" class="nav__checkbox show-sm">
+                <div class="nav__toggle--bg">
+                    <div class="nav__toggle"></div>
+                </div>
+            </label>
+
+            <div class="nav__background show-sm"></div>
+
+            <div class="mobile__nav show-sm">
+                <div class="nav__user">
+                    <img src="./images/hn-hacker.png" alt="">
+                    <span>Timigod</span>
+                </div>
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link active">Top news</a></li>
+                    <li><a href="" class="nav__link">Threads</a></li>
+                    <li><a href="" class="nav__link">Past</a></li>
+                    <li><a href="" class="nav__link">Comments</a></li>
+                    <li><a href="" class="nav__link">Ask</a></li>
+                    <li><a href="" class="nav__link">Jobs</a></li>
+                    <li><a href="" class="nav__link">Show</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>  
+    <div class="page">
+        <main class="home">
+            <section class="share-news card">
+                <h4 class="card__header">
+                    Submit News
+                </h4>
+                <div class="card__body">
+                    <form action="" class="share-news__form form">
+                        <div class="form__group">
+                            <label for="" class="form__label">Title</label>
+                            <input type="text" placeholder="Write title here" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label for="" class="form__label">Url</label>
+                            <input type="text" placeholder="News url here" class="form__input">
+                        </div>
+                        <div class="form__group hidden">
+                            <label for="" class="form__label">Text</label> 
+                            <textarea placeholder="News text here" class="form__textarea"></textarea>
+                        </div>
+
+                        <div class="form__group form__footer">
+                            <div class="post-toggle">
+                                <span>Write text</span>
+                                <label for="write-text">
+                                    <input class="form__switch--checkbox" id="write-text" type="checkbox" name="write-text">
+                                    <div class="form__switch">
+                                        <div class="toggle"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Share</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="news card">
+                <h4 class="card__header">
+                    Top News
+                </h4>
+
+                <div class="card__body">
+                    <ul class="news__list">
+                        <li class="news__item">
+                            <div class="upvote">
+                                <div class="upvote__triangle"></div>
+                                <span class="upvote__count">120</span>
+                            </div>
+                            <div class="news__body">
+                                <a href="" class="news__title">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae veniam fugit ipsum sequi porro dignissimos labore itaque animi ullam quibusdam.
+                                </a>
+                                <div class="news__details">
+                                    By <a href="" class="news__link">John Doe</a> 3 hours ago | <a href="" class="news__link">30 comments</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news__item">
+                            <div class="upvote">
+                                <div class="upvote__triangle"></div>
+                                <span class="upvote__count">120</span>
+                            </div>
+                            <div class="news__body">
+                                <a href="" class="news__title">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae veniam fugit
+                                    ipsum sequi porro dignissimos labore itaque animi ullam quibusdam.
+                                </a>
+                                <div class="news__details">
+                                    By <a href="" class="news__link">John Doe</a> 3 hours ago | <a href=""
+                                        class="news__link">30 comments</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news__item">
+                            <div class="upvote">
+                                <div class="upvote__triangle"></div>
+                                <span class="upvote__count">120</span>
+                            </div>
+                            <div class="news__body">
+                                <a href="" class="news__title">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae veniam fugit
+                                    ipsum sequi porro dignissimos labore itaque animi ullam quibusdam.
+                                </a>
+                                <div class="news__details">
+                                    By <a href="" class="news__link">John Doe</a> 3 hours ago | <a href=""
+                                        class="news__link">30 comments</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <aside class="card">
+            <h4 class="card__header">
+                Other links
+            </h4>
+            <nav class="side-nav">
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link active">Top news</a></li>
+                    <li><a href="" class="nav__link">Threads</a></li>
+                    <li><a href="" class="nav__link">Past</a></li>
+                    <li><a href="" class="nav__link">Comments</a></li>
+                    <li><a href="" class="nav__link">Ask</a></li>
+                    <li><a href="" class="nav__link">Jobs</a></li>
+                    <li><a href="" class="nav__link">Show</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</body>
+</html>

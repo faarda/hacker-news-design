@@ -1,0 +1,149 @@
+.nav{
+    &__list{
+        list-style: none;
+        text-align: center;
+
+        li{
+            padding: 5px 0;
+            &:not(:last-child){
+                border-bottom: 1px solid $light;
+            }
+        }
+    }
+
+    &__link{
+        color: $primary;
+        text-decoration: none;
+        display: block;
+        padding: 6px 0;
+        border-radius: 3px;
+        transition: .2s all;
+
+        &.active,
+        &:hover{
+            background: $primary;
+            color: white;
+        }
+    }
+
+    &__toggle{
+        display: inline-block;
+        width: 2.5rem;
+        height: 2px;
+        background: $dark-lighter;
+        position: relative;
+        cursor: pointer;
+
+        &::before{
+            top: -.7rem;
+        }
+
+        &::after {
+            top: .7rem;
+        }
+
+        &--bg{
+            position: relative;
+            background: #ffffff;
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 50%;
+            @include flex;
+            justify-content: center;
+            box-shadow: 0 1px 10px rgba(0,0,0, .2);
+            z-index: 1500;
+        }
+    }
+
+    &__toggle::before,
+    &__toggle::after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2px;
+        background: $dark-lighter;
+        transition: .2s all;
+    }
+
+    &__toggle--bg:hover > &__toggle {
+        // opacity: 0;
+
+        &::before{
+            top: -.9rem;
+        }
+
+        &::after{
+            top: .9rem;
+        }
+    }
+
+    &__background{
+        background: rgba(#052336, 0.95);
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        top: 1.1rem;
+        right: 2.3rem;
+        z-index: 1200;
+
+        transition: .5s all;
+    }
+
+    &__checkbox:checked ~ &__background{
+        transform: scale(100);
+    }
+
+    &__checkbox:checked ~ .mobile__nav {
+        opacity: 1;
+        display: flex;
+    }
+
+    &__checkbox:checked ~ &__checkbox > &__toggle--bg > &__toggle {
+        background: transparent;
+
+        &::before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .mobile__nav {
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+        @include flex;
+        flex-direction: column;
+        opacity: 0;
+        display: none;
+        transition: .8s all;
+
+        .nav__list {
+            width: 80%;
+            margin: auto;
+        }
+
+        .nav__user{
+            // display: inline-flex;
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+}
+
+aside{
+    @include small{
+        display: none;
+    }
+}
+
+
+
